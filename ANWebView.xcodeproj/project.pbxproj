@@ -109,9 +109,9 @@
 				A8C698B11D5335C300F7CC3B /* AppDelegate.m */,
 				A8C698B31D5335C300F7CC3B /* ViewController.h */,
 				A8C698B41D5335C300F7CC3B /* ViewController.m */,
-				A8C698E01D5335DC00F7CC3B /* ANWebViewDefine.h */,
 				A8C698E11D5335FD00F7CC3B /* ANWebView.h */,
 				A8C698E21D5335FD00F7CC3B /* ANWebView.m */,
+				A8C698E01D5335DC00F7CC3B /* ANWebViewDefine.h */,
 				A8C698B61D5335C300F7CC3B /* Main.storyboard */,
 				A8C698B91D5335C300F7CC3B /* Assets.xcassets */,
 				A8C698BB1D5335C300F7CC3B /* LaunchScreen.storyboard */,
@@ -506,6 +506,7 @@
 				A8C698D91D5335C300F7CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8C698DA1D5335C300F7CC3B /* Build configuration list for PBXNativeTarget "ANWebViewTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +515,7 @@
 				A8C698DC1D5335C300F7CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A8C698DD1D5335C300F7CC3B /* Build configuration list for PBXNativeTarget "ANWebViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +524,7 @@
 				A8C698DF1D5335C300F7CC3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

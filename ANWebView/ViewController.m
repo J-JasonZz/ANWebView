@@ -7,8 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ANWebView.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) ANWebView *an_webView;
 
 @end
 
@@ -16,7 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
+    self.an_webView = [[ANWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
+    [self.view addSubview:self.an_webView.webView];
+    
+    [self.an_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+   
 }
 
 - (void)didReceiveMemoryWarning {
