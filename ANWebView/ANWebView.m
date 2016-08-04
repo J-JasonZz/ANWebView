@@ -29,7 +29,7 @@
 
 - (void)configUIWebView
 {
-    
+    return;
 }
 
 - (void)configWKWebView
