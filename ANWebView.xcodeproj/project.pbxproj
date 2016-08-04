@@ -15,6 +15,7 @@
 		A8C698BD1D5335C300F7CC3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8C698BB1D5335C300F7CC3B /* LaunchScreen.storyboard */; };
 		A8C698C81D5335C300F7CC3B /* ANWebViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698C71D5335C300F7CC3B /* ANWebViewTests.m */; };
 		A8C698D31D5335C300F7CC3B /* ANWebViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698D21D5335C300F7CC3B /* ANWebViewUITests.m */; };
+		A8C698E31D5335FD00F7CC3B /* ANWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698E21D5335FD00F7CC3B /* ANWebView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,9 @@
 		A8C698CE1D5335C300F7CC3B /* ANWebViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ANWebViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C698D21D5335C300F7CC3B /* ANWebViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANWebViewUITests.m; sourceTree = "<group>"; };
 		A8C698D41D5335C300F7CC3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C698E01D5335DC00F7CC3B /* ANWebViewDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANWebViewDefine.h; sourceTree = "<group>"; };
+		A8C698E11D5335FD00F7CC3B /* ANWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANWebView.h; sourceTree = "<group>"; };
+		A8C698E21D5335FD00F7CC3B /* ANWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANWebView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,9 @@
 				A8C698B11D5335C300F7CC3B /* AppDelegate.m */,
 				A8C698B31D5335C300F7CC3B /* ViewController.h */,
 				A8C698B41D5335C300F7CC3B /* ViewController.m */,
+				A8C698E01D5335DC00F7CC3B /* ANWebViewDefine.h */,
+				A8C698E11D5335FD00F7CC3B /* ANWebView.h */,
+				A8C698E21D5335FD00F7CC3B /* ANWebView.m */,
 				A8C698B61D5335C300F7CC3B /* Main.storyboard */,
 				A8C698B91D5335C300F7CC3B /* Assets.xcassets */,
 				A8C698BB1D5335C300F7CC3B /* LaunchScreen.storyboard */,
@@ -272,6 +279,7 @@
 			files = (
 				A8C698B51D5335C300F7CC3B /* ViewController.m in Sources */,
 				A8C698B21D5335C300F7CC3B /* AppDelegate.m in Sources */,
+				A8C698E31D5335FD00F7CC3B /* ANWebView.m in Sources */,
 				A8C698AF1D5335C300F7CC3B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
