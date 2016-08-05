@@ -7,11 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "ANWebView.h"
+#import "ANWebViewController.h"
 
 @interface ViewController ()
-
-@property (nonatomic, strong) ANWebView *an_webView;
 
 @end
 
@@ -19,13 +17,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc] init];
-    self.an_webView = [[ANWebView alloc] initWithFrame:self.view.bounds configuration:configuration];
-    [self.view addSubview:self.an_webView.webView];
     
-    [self.an_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
-   
+    UIButton *pushButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    pushButton.backgroundColor = [UIColor redColor];
+    pushButton.frame = CGRectMake(100, 100, 100, 100);
+    [pushButton addTarget:self action:@selector(pushAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:pushButton];
+}
+
+- (void)pushAction
+{
+    ANWebViewController *controller = [[ANWebViewController alloc] init];
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

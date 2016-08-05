@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A82D9A581D54699C0027F3F0 /* AN_NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = A82D9A551D54699C0027F3F0 /* AN_NJKWebViewProgress.m */; };
+		A82D9A591D54699C0027F3F0 /* AN_NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = A82D9A571D54699C0027F3F0 /* AN_NJKWebViewProgressView.m */; };
+		A82D9A5C1D546E9D0027F3F0 /* ANWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A82D9A5B1D546E9D0027F3F0 /* ANWebViewController.m */; };
 		A8C698AF1D5335C300F7CC3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698AE1D5335C300F7CC3B /* main.m */; };
 		A8C698B21D5335C300F7CC3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698B11D5335C300F7CC3B /* AppDelegate.m */; };
 		A8C698B51D5335C300F7CC3B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8C698B41D5335C300F7CC3B /* ViewController.m */; };
@@ -36,6 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A82D9A541D54699C0027F3F0 /* AN_NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AN_NJKWebViewProgress.h; sourceTree = "<group>"; };
+		A82D9A551D54699C0027F3F0 /* AN_NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AN_NJKWebViewProgress.m; sourceTree = "<group>"; };
+		A82D9A561D54699C0027F3F0 /* AN_NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AN_NJKWebViewProgressView.h; sourceTree = "<group>"; };
+		A82D9A571D54699C0027F3F0 /* AN_NJKWebViewProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AN_NJKWebViewProgressView.m; sourceTree = "<group>"; };
+		A82D9A5A1D546E9D0027F3F0 /* ANWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ANWebViewController.h; sourceTree = "<group>"; };
+		A82D9A5B1D546E9D0027F3F0 /* ANWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ANWebViewController.m; sourceTree = "<group>"; };
 		A8C698AA1D5335C300F7CC3B /* ANWebView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANWebView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8C698AE1D5335C300F7CC3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A8C698B01D5335C300F7CC3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +91,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A82D9A531D54699C0027F3F0 /* AN_NJKWebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+				A82D9A541D54699C0027F3F0 /* AN_NJKWebViewProgress.h */,
+				A82D9A551D54699C0027F3F0 /* AN_NJKWebViewProgress.m */,
+				A82D9A561D54699C0027F3F0 /* AN_NJKWebViewProgressView.h */,
+				A82D9A571D54699C0027F3F0 /* AN_NJKWebViewProgressView.m */,
+			);
+			name = AN_NJKWebViewProgress;
+			path = NJKWebViewProgress;
+			sourceTree = "<group>";
+		};
 		A8C698A11D5335C300F7CC3B = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +126,15 @@
 		A8C698AC1D5335C300F7CC3B /* ANWebView */ = {
 			isa = PBXGroup;
 			children = (
+				A82D9A531D54699C0027F3F0 /* AN_NJKWebViewProgress */,
 				A8C698B01D5335C300F7CC3B /* AppDelegate.h */,
 				A8C698B11D5335C300F7CC3B /* AppDelegate.m */,
 				A8C698B31D5335C300F7CC3B /* ViewController.h */,
 				A8C698B41D5335C300F7CC3B /* ViewController.m */,
 				A8C698E11D5335FD00F7CC3B /* ANWebView.h */,
 				A8C698E21D5335FD00F7CC3B /* ANWebView.m */,
+				A82D9A5A1D546E9D0027F3F0 /* ANWebViewController.h */,
+				A82D9A5B1D546E9D0027F3F0 /* ANWebViewController.m */,
 				A8C698E01D5335DC00F7CC3B /* ANWebViewDefine.h */,
 				A8C698B61D5335C300F7CC3B /* Main.storyboard */,
 				A8C698B91D5335C300F7CC3B /* Assets.xcassets */,
@@ -277,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A82D9A581D54699C0027F3F0 /* AN_NJKWebViewProgress.m in Sources */,
+				A82D9A591D54699C0027F3F0 /* AN_NJKWebViewProgressView.m in Sources */,
 				A8C698B51D5335C300F7CC3B /* ViewController.m in Sources */,
 				A8C698B21D5335C300F7CC3B /* AppDelegate.m in Sources */,
+				A82D9A5C1D546E9D0027F3F0 /* ANWebViewController.m in Sources */,
 				A8C698E31D5335FD00F7CC3B /* ANWebView.m in Sources */,
 				A8C698AF1D5335C300F7CC3B /* main.m in Sources */,
 			);

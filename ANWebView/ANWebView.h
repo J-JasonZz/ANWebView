@@ -19,17 +19,19 @@
 - (void)an_webViewDidFinishLoad:(ANWebView *)webView;
 - (void)an_webView:(ANWebView *)webView didFailLoadWithError:(nullable NSError *)error;
 - (BOOL)an_webView:(ANWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+
+- (void)an_webView:(ANWebView *)webView loadProgress:(float)progress;
 @end
 
 @interface ANWebView : NSObject
 
-@property (nonatomic, weak, nullable) UIView *webView;
+@property (nonatomic, weak, nullable, readonly) UIView *webView;
 
-@property (nonatomic, strong, nullable) WKWebView *wkWebView;
+@property (nonatomic, strong, nullable, readonly) WKWebView *wkWebView;
 
-@property (nonatomic, strong, nullable) UIWebView *uiWebView;
+@property (nonatomic, strong, nullable, readonly) UIWebView *uiWebView;
 
-@property (nonatomic, strong) UIScrollView *scrollView;
+@property (nonatomic, strong, readonly) UIScrollView *scrollView;
 
 @property (nonatomic, weak, nullable) id<ANWebViewDelegate> delegate;
 
