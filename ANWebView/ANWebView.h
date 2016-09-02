@@ -13,12 +13,22 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wnullability-completeness"
 
+typedef NS_ENUM(NSInteger, ANWebViewNavigationType) {
+    ANWebViewNavigationTypeLinkClicked,
+    ANWebViewNavigationTypeFormSubmitted,
+    ANWebViewNavigationTypeBackForward,
+    ANWebViewNavigationTypeReload,
+    ANWebViewNavigationTypeFormResubmitted,
+    ANWebViewNavigationTypeOther
+};
+
 @class ANWebView;
 @protocol ANWebViewDelegate <NSObject>
+@optional
 - (void)an_webViewDidStartLoad:(ANWebView *)webView;
 - (void)an_webViewDidFinishLoad:(ANWebView *)webView;
 - (void)an_webView:(ANWebView *)webView didFailLoadWithError:(nullable NSError *)error;
-- (BOOL)an_webView:(ANWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType;
+- (BOOL)an_webView:(ANWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(ANWebViewNavigationType)navigationType;
 
 - (void)an_webView:(ANWebView *)webView loadProgress:(float)progress;
 @end
@@ -48,6 +58,10 @@
 - (void)loadRequest:(NSURLRequest *)request;
 
 - (void)loadHTMLString:(NSString *)string baseURL:(nullable NSURL *)baseURL;
+
+- (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^ __nullable)(__nullable id, NSError * __nullable error))completionHandler;
+
+- (UIView *)snapshotViewAfterScreenUpdates:(BOOL)afterUpdates;
 
 - (void)goBack;
 

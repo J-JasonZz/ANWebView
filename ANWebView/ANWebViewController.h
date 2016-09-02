@@ -10,4 +10,6 @@
 
 @interface ANWebViewController : UIViewController
 
+- (instancetype)initWithUrl:(NSURL *)url;
+
 @end

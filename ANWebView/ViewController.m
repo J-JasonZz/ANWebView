@@ -27,7 +27,7 @@
 
 - (void)pushAction
 {
-    ANWebViewController *controller = [[ANWebViewController alloc] init];
+    ANWebViewController *controller = [[ANWebViewController alloc] initWithUrl:[NSURL URLWithString:@"http://baidu.com"]];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

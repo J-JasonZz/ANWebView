@@ -116,6 +116,23 @@
     _wkWebView ? [_wkWebView loadHTMLString:string baseURL:baseURL] : [_uiWebView loadHTMLString:string baseURL:baseURL];
 }
 
+- (void)evaluateJavaScript:(NSString *)javaScriptString completionHandler:(void (^ __nullable)(__nullable id, NSError * __nullable error))completionHandler
+{
+    if (_wkWebView) {
+        [_wkWebView evaluateJavaScript:javaScriptString completionHandler:completionHandler];
+    } else {
+        NSString *result = [_uiWebView stringByEvaluatingJavaScriptFromString:javaScriptString];
+        if (completionHandler) {
+            completionHandler(result, nil);
+        }
+    }
+}
+
+- (UIView *)snapshotViewAfterScreenUpdates:(BOOL)afterUpdates
+{
+    return _wkWebView ? [_wkWebView snapshotViewAfterScreenUpdates:afterUpdates] : [_uiWebView snapshotViewAfterScreenUpdates:afterUpdates];
+}
+
 - (void)goBack
 {
     _wkWebView ? [_wkWebView goBack] : [_uiWebView goBack];
@@ -140,7 +157,7 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"estimatedProgress"]) {
-        [self _webViewProgressChanged:[change[@"NSKeyValueChangeNewKey"] floatValue]];
+        [self _webViewProgressChanged:[change[@"new"] floatValue]];
     }
 }
 
@@ -231,7 +248,7 @@
     BOOL shouldLoad = YES;
     if (_delegateFlags.shouldStartLoadWithRequest) {
         if (navigationType == -1) {
-            navigationType = WKNavigationTypeOther;
+            navigationType = ANWebViewNavigationTypeOther;
         }
         return [_delegate an_webView:self shouldStartLoadWithRequest:request navigationType:navigationType];
     }
